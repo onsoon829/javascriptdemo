@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //선언하고 다른 값 선언하면 다른 값으로 대체. 기존값으로는 되돌아갈 수 없다. 이후 같은 값으로 선언해도 주소는 다르다.
+      let data = 30;
+      data = "javascript";
+
+      let wrap = data;
+      console.log(wrap == data); //true
+
+      wrap = "korea";
+      console.log(wrap == data); // false
+      console.log(`${data}, ${wrap}`); //javascript, korea
+    </script>
+  </body>
+</html>

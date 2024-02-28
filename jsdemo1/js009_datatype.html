@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js009_datatype</title>
+  </head>
+  <body>
+    <script>
+      //data type : primitive datatype(기본데이터 타입), reference datatype(참조데이터 타입)
+      let num = 3;
+      //console.log(typeof(num)); //이것도 가능
+      console.log(typeof num); // number
+      console.log(num + 2); //5
+      num;
+      num = "3";
+      console.log(typeof num); //String
+      console.log(num + 2); //32 =문자열 연결의 의미
+
+      let avg = 4.5;
+      console.log(`avg:${avg}, ${typeof avg}`); // avg:{avg}, number// 정수 실수 구별 안한다,
+
+      let check = true;
+      console.log(`check=${check}, ${typeof check}`); //true, boolean
+
+      let data = "javascript";
+      console.log(`data=${data}, ${typeof data}`); //data=javascript, string
+
+      let na = undefined;
+      console.log(`na=${na}, ${typeof na}`); //na=undefined, undefined
+
+      let name = null;
+      console.log(`name=${name}, ${typeof name}`); //name=null, object
+
+      let loc = new String("node");
+      console.log(`loc=${loc}, ${typeof loc}`); //loc=node, object
+      console.log(`loc=${loc instanceof String}`); //loc=true //instanceof: 객체가 특정 클래스에 속하는지 확인하는 함수. 참이면 true 출력.
+
+      //변수의 값으로 사용되는 함수는 익명함수로 정의한다.익명 함수?
+      let fn = function () {
+        console.log("function");
+      };
+
+      console.log(`fn=${fn}, ${typeof fn}`); //fn=function () {console.log("function");}, function
+
+      //in arr = {1,2,3}// 자바
+      //배열
+      let arr = [1, 2, 3];
+      console.log(`arr=${arr}, ${typeof arr}`); //arr=1,2,3, object
+      console.log(`arr=${arr instanceof Array}`); //arr=true
+
+      let customer = { name: "홍길동", age: 30 };
+      //여러 타입 값 쓸 땐 중괄호로 쓴다.
+
+      console.log(`customer=${customer}, ${typeof customer}`); //customer=[object Object], object
+      console.log(`customer=${customer instanceof Object}`); //customer=true
+      console.log(`${customer.name}, ${customer.age}`); //홍길동, 30 // object만 쓰면 값만 출력
+    </script>
+  </body>
+</html>
