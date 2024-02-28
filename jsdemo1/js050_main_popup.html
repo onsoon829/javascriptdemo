@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js050_main_popup_htmlhhn</title>
+    <style>
+      #popup {
+        width: 301px;
+        height: 351px;
+        border: 1px solid black;
+        position: fixed;
+        left: 30%;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        show:f는 객체 내의 함수를 가리킵니다. 여기서 show는 객체 member의
+        메서드를 가리키고, f는 그것이 함수임을 나타냅니다. 따라서 {name:
+        "홍길동", show:f}에서 show:f는 "show 메서드는 함수임"을 의미합니다. 즉,
+        member 객체 내에 show라는 메서드가 있고, 이것은 함수입니다.
+      </p>
+      <div id="popup">
+        <img src="images/popup.jpg" usemap="#pop" />
+      </div>
+      <map name="pop" id="pop">
+        <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기" />
+      </map>
+    </div>
+    <script>
+      let close = document.querySelector("map#pop area");
+      close.onclick = () => {
+        let popup = document.querySelector("div#popup");
+        popup.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
